@@ -18,9 +18,11 @@ services:
       - postgres
     volumes:
       - toro_build:/toro
+    image: germandz/toro_runtime
   toro_building:
     build:
       context: .
       dockerfile: Dockerfile-building
     volumes:
       - toro_build:/toro
+    image: germandz/toro_building
